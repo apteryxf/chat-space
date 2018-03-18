@@ -27,18 +27,17 @@ Things you may want to cover:
 
 ## users table
 
-| Column     | Type    | Options                        |
-|:-----------|:--------|:-------------------------------|
-| name       | string  | null: false, unique: true      |
-| email      | string  | null: false, unique: true      |
-| member_id  | integer | null: false, foreign_key: true |
-| message_id | integer |                                |
+| Column | Type   | Options                   |
+|:-------|:-------|:--------------------------|
+| name   | string | null: false, unique: true |
+| email  | string | null: false, unique: true |
 
 - nameカラムにインデックスを貼る。
 
 ### Association
 
-- has_many :groups
+- has_many :groups, through: :members
+- has_many :members
 - has_many :messages
 
 ## members table
@@ -54,24 +53,23 @@ Things you may want to cover:
 
 ## groups table
 
-| Column     | Type    | Options                        |
-|:-----------|:--------|:-------------------------------|
-| name       | string  | null: false,                   |
-| member_id  | integer | null: false, foreign_key: true |
-| message_id | integer |                                |
+| Column | Type   | Options      |
+|:-------|:-------|:-------------|
+| name   | string | null: false, |
 
 ### Association
-- has_many :users
+- has_many :users, through: :members
+- has_many :members
 - has_many :messages
 
 ## messages table
 
-| Column    | Type    | Options                        |
-|:----------|:--------|:-------------------------------|
-| body      | text    | null: false                    |
-| image_url | string  |                                |
-| user_id   | integer | null: false, foreign_key: true |
-| group_id  | integer | null: false, foreign_key: true |
+| Column   | Type    | Options                        |
+|:---------|:--------|:-------------------------------|
+| body     | text    | null: false                    |
+| image    | string  |                                |
+| user_id  | integer | null: false, foreign_key: true |
+| group_id | integer | null: false, foreign_key: true |
 
 ### Association
 - belongs_to :user
