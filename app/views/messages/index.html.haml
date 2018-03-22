@@ -1,0 +1,17 @@
+.sidebar
+  .header
+    %p
+      user_name
+    %ul
+      %li
+        %a{class: "fa fa-pencil-square-o icon", href: ""}
+      %li
+        %a{class: "fa fa-cog icon", href: ""}
+  .groups
+    -# = groups.each do |group|
+    = render partial: "group"
+    -# end
+.chat
+  .header
+  .messages
+  .form
