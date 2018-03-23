@@ -1,0 +1,48 @@
+html, body {
+  height: 100%;
+}
+
+.sidebar {
+  height: 100%;
+  width: 300px;
+  float: left;
+  $color: #FFFFFF;
+  &__header {
+    height: 100px;
+    line-height: 100px;
+    background-color: #253141;
+    padding: 0 20px 0 20px;
+    p {
+      @include font(16px, bold, white);
+      float: left;
+    }
+    ul {
+      float: right;
+      li {
+        float: left;
+      }
+      .fa {
+        color: $color;
+      }
+      .fa-pencil-square-o {
+        margin-right: 10px;
+      }
+    }
+  }
+  &__groups {
+    background-color: #2f3e51;
+    height: calc(100% - 100px);
+    padding: 0 20px 0 20px;
+    .group {
+      height: 91px;
+      &--name {
+        @include font(15px, normal, $color);
+        padding: 20px 0 5px 0;
+      }
+      &--message {
+        @include font(11px, normal, $color);
+        padding-bottom: 40px;
+      }
+    }
+  }
+}

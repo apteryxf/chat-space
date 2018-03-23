@@ -1,0 +1,17 @@
+.sidebar
+  .sidebar__header
+    %p
+      user_name
+    %ul
+      %li
+      = link_to "", "", class: "fa fa-pencil-square-o icon"
+      %li
+      = link_to "", "", class: "fa fa-cog icon"
+  .sidebar__groups
+    -# = groups.each do |group|
+    = render partial: "group"
+    -# end
+.chat
+  .chat__header
+  .chat__messages
+  .chat__form
