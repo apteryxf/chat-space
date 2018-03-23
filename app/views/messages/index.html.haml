@@ -1,17 +1,17 @@
 .sidebar
-  .header
+  .sidebar__header
     %p
       user_name
     %ul
       %li
-        %a{class: "fa fa-pencil-square-o icon", href: ""}
+      = link_to "", "", class: "fa fa-pencil-square-o icon"
       %li
-        %a{class: "fa fa-cog icon", href: ""}
-  .groups
+      = link_to "", "", class: "fa fa-cog icon"
+  .sidebar__groups
     -# = groups.each do |group|
     = render partial: "group"
     -# end
 .chat
-  .header
-  .messages
-  .form
+  .chat__header
+  .chat__messages
+  .chat__form

@@ -7,7 +7,7 @@ html, body {
   width: 300px;
   float: left;
   $color: #FFFFFF;
-  .header {
+  &__header {
     height: 100px;
     line-height: 100px;
     background-color: #253141;
@@ -29,34 +29,20 @@ html, body {
       }
     }
   }
-  .groups {
+  &__groups {
     background-color: #2f3e51;
     height: calc(100% - 100px);
     padding: 0 20px 0 20px;
     .group {
       height: 91px;
-      #group-name {
+      &--name {
         @include font(15px, normal, $color);
         padding: 20px 0 5px 0;
       }
-      p {
+      &--message {
         @include font(11px, normal, $color);
         padding-bottom: 40px;
       }
     }
-  }
-}
-
-.chat {
-  height: 100%;
-  float: right;
-  .header {
-
-  }
-  .messages {
-
-  }
-  .form {
-
   }
 }
