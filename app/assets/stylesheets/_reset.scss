@@ -124,3 +124,9 @@ legend {
 }
 /* YUI CSS Detection Stamp */
 #yui3-css-stamp.cssreset { display: none; }
+
+// specify width and height 100%
+html, body {
+  height: 100%;
+  width: 100%;
+}

@@ -1,13 +1,95 @@
 .chat {
   height: 100%;
+  width: calc(100% - 300px);
   float: right;
+  $side_padding: 0 40px 0 40px;
   &__header {
-
+    height: 99px;
+    padding: $side_padding;
+    border-bottom: 1px solid #eeeeee;
+    &__left {
+      float: left;
+      &__group-name {
+        @include font(20px, normal, #333333);
+        padding: 35px 0 15px 0;
+      }
+      &__members {
+        @include font(12px, normal, #999999);
+      }
+    }
+    &__btn {
+      height: 40px;
+      float: right;
+      text-align: center;
+      padding: 0 20px 0 20px;
+      margin-top: 28px;
+      border: 1px solid #38AEF0;
+      .btn {
+        line-height: 40px;
+        color: #38AEF0;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
   }
   &__messages {
-
+    height: calc(100% - 100px - 90px);
+    padding: $side_padding;
+    background-color: #AAAAAA;
+    .message {
+      &__lists {
+        padding-top: 46px;
+        line-height: 16px;
+        &__list {
+          float: left;
+          .user-name {
+            @include font(16px, bold, #434A54);
+            padding-right: 10px;
+          }
+          .date {
+            @include font(12px, normal, #999999);
+          }
+        }
+      }
+      &--body {
+        padding: 10px 0 40px 0;
+        clear: both;
+        @include font(14px, normal, #434A54)
+      }
+    }
   }
   &__form {
-
+    height: 90px;
+    form {
+      position: relative;
+      .message {
+        height: 50px;
+        width: calc(100% - 40px * 2 - 93px);
+        box-sizing: border-box;
+        padding-left: 10px;
+        margin: 18px 13px 18px 38px;
+        @include font(16px, normal, #434A54);
+        float: left;
+      }
+      label {
+        position: absolute;
+        top: 38px;
+        right: 145px;
+        input {
+          display: none;
+        }
+      }
+      .btn {
+        height: 50px;
+        width: 80px;
+        margin: 20px 40px 0 0;
+        background-color: #38AEF0;
+        color: white;
+        border: none;
+        float: right;
+      }
+    }
   }
 }
