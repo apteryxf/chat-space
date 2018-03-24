@@ -2,7 +2,7 @@
   height: 100%;
   width: 300px;
   float: left;
-  $color: #FFFFFF;
+  $white: #FFFFFF;
   &__header {
     height: 100px;
     line-height: 100px;
@@ -18,7 +18,7 @@
         float: left;
       }
       .fa {
-        color: $color;
+        color: $white;
         text-decoration: none;
         &:hover {
           text-decoration: underline;
@@ -35,11 +35,11 @@
     padding: 0 20px 0 20px;
     .group {
       &--name {
-        @include font(15px, normal, $color);
+        @include font(15px, normal, $white);
         padding: 20px 0 5px 0;
       }
       &--message {
-        @include font(11px, normal, $color);
+        @include font(11px, normal, $white);
         padding-bottom: 40px;
       }
     }

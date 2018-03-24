@@ -39,10 +39,10 @@
     padding: $side_padding;
     background-color: #AAAAAA;
     .message {
-      ul {
+      &__lists {
         padding-top: 46px;
         line-height: 16px;
-        li {
+        &__list {
           float: left;
           .user-name {
             @include font(16px, bold, #434A54);
@@ -64,7 +64,7 @@
     height: 90px;
     form {
       position: relative;
-      .body {
+      .message {
         height: 50px;
         width: calc(100% - 40px * 2 - 93px);
         box-sizing: border-box;
