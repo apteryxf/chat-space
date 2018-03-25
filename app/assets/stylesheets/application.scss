@@ -1,6 +1,6 @@
 @import "reset";
-@import "variable";
-@import "mixins";
+@import "./config/variable";
+@import "./mixin/mixin";
 @import "font-awesome";
-@import "messages_sidebar";
-@import "messages_chat";
+@import "./modules/messages_sidebar";
+@import "./modules/messages_chat";
