@@ -56,4 +56,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Convert .erb -> .haml
 gem 'haml-rails'
 gem 'erb2haml'
+
 gem 'font-awesome-rails'
+
+# user management
+gem 'devise'
