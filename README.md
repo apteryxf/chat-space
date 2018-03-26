@@ -47,6 +47,8 @@ Things you may want to cover:
 | user_id  | integer | null: false, foreign_key: true |
 | group_id | integer | null: false, foreign_key: true |
 
+- 両カラムにインデックスを貼る。
+
 ### Association
 - belongs_to :group
 - belongs_to :user
