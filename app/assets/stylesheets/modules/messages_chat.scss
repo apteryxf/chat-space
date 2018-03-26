@@ -42,15 +42,14 @@
       &__lists {
         padding-top: 46px;
         line-height: 16px;
-        &__list {
+        #user-name {
+          @include font(16px, bold, #434A54);
+          padding-right: 10px;
           float: left;
-          .user-name {
-            @include font(16px, bold, #434A54);
-            padding-right: 10px;
-          }
-          .date {
-            @include font(12px, normal, #999999);
-          }
+        }
+        #date {
+          @include font(12px, normal, #999999);
+          float: left;
         }
       }
       &--body {
@@ -62,9 +61,9 @@
   }
   &__form {
     height: 90px;
-    form {
+    &__form {
       position: relative;
-      .message {
+      &--message {
         height: 50px;
         width: calc(100% - 40px * 2 - 93px);
         box-sizing: border-box;
@@ -73,15 +72,15 @@
         @include font(16px, normal, #434A54);
         float: left;
       }
-      label {
+      .fa {
         position: absolute;
         top: 38px;
         right: 145px;
-        input {
+        .hidden {
           display: none;
         }
       }
-      .btn {
+      &--btn {
         height: 50px;
         width: 80px;
         margin: 20px 40px 0 0;
