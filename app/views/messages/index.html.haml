@@ -15,11 +15,9 @@
   .chat__header
     .chat__header__left
       .chat__header__left__group-name
-        %p
-          group name
+        group name
       .chat__header__left__members
-        %p
-          Member: current_user_name member0_name member1_name ...
+        Member: current_user_name member0_name member1_name ...
     .chat__header__btn
       = link_to "Edit", "", class: "btn"
   .chat__messages
@@ -27,8 +25,8 @@
     = render partial: "message"
     -# end
   .chat__form
-    %form
-      %input{type: "text", placeholder: "type a message", class: "message"}
+    %form.chat__form__form
+      %input{type: "text", placeholder: "type a message", class: "chat__form__form--message"}
       %label{class: "fa fa-picture-o icon"}
-        %input{type: "file"}
-      %input{value: "Send", type: "submit", class: "btn"}
+        %input{type: "file", class: "hidden"}
+      %input{value: "Send", type: "submit", class: "chat__form__form--btn"}
