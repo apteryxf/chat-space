@@ -4,7 +4,7 @@ class GroupsController < ApplicationController
   end
 
   def new
-    #code
+    @group = Group.new
   end
 
   def create
@@ -18,4 +18,5 @@ class GroupsController < ApplicationController
   def update
     #code
   end
+
 end
