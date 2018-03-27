@@ -4,7 +4,7 @@
       = current_user.name
     %ul
       %li
-      = link_to "", "", class: "fa fa-pencil-square-o icon"
+      = link_to "", "groups/new", class: "fa fa-pencil-square-o icon"
       %li
       = link_to edit_user_path(current_user) do
         = fa_icon 'cog', class: 'icon'
@@ -20,7 +20,7 @@
       .chat__header__left__members
         Member: current_user_name member0_name member1_name ...
     .chat__header__btn
-      = link_to "Edit", "", class: "btn"
+      = link_to "Edit", "groups/#{:id}/edit", class: "btn"
   .chat__messages
     -# = messages.each do |message|
     = render partial: "message"
