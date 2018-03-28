@@ -4,14 +4,18 @@
       = current_user.name
     %ul
       %li
-      = link_to "", "", class: "fa fa-pencil-square-o icon"
+      = link_to "", "groups/new", class: "fa fa-pencil-square-o icon"
       %li
       = link_to edit_user_path(current_user) do
         = fa_icon 'cog', class: 'icon'
   .sidebar__groups
-    -# = groups.each do |group|
-    = render partial: "group"
-    -# end
+    - @groups.each do |group|
+      = link_to group_messages_path(group) do
+        .group
+          .group--name
+            = group.name
+          .group--message
+            latest message
 .chat
   .chat__header
     .chat__header__left
@@ -20,10 +24,17 @@
       .chat__header__left__members
         Member: current_user_name member0_name member1_name ...
     .chat__header__btn
-      = link_to "Edit", "", class: "btn"
+      = link_to "Edit", "groups/#{:id}/edit", class: "btn"
   .chat__messages
     -# = messages.each do |message|
-    = render partial: "message"
+    .message
+      %ul.message__lists
+        %li.message__lists__list#user-name
+          user name
+        %li.message__lists__list#date
+          yyyy/mm/dd hh:ss
+      %p.message--body
+        body text
     -# end
   .chat__form
     %form.chat__form__form
