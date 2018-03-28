@@ -16,5 +16,5 @@
 # Ignore Byebug command history file.
 .byebug_history
 
-# Ignore image files uploaded by user
-/public/uploads/*
+# Ignore image files uploaded by user and more
+/public/*
