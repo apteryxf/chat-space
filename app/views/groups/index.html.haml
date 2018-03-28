@@ -9,9 +9,13 @@
       = link_to edit_user_path(current_user) do
         = fa_icon 'cog', class: 'icon'
   .sidebar__groups
-    -# = groups.each do |group|
-    = render partial: "group"
-    -# end
+    = @groups.each do |group|
+      = link_to group_messages_path(group) do
+        .group
+          .group--name
+            = group.name
+          .group--message
+            latest message
 .chat
   .chat__header
     .chat__header__left
@@ -23,7 +27,14 @@
       = link_to "Edit", "groups/#{:id}/edit", class: "btn"
   .chat__messages
     -# = messages.each do |message|
-    = render partial: "message"
+    .message
+      %ul.message__lists
+        %li.message__lists__list#user-name
+          user name
+        %li.message__lists__list#date
+          yyyy/mm/dd hh:ss
+      %p.message--body
+        body text
     -# end
   .chat__form
     %form.chat__form__form
