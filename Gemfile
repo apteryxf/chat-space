@@ -61,3 +61,9 @@ gem 'font-awesome-rails'
 
 # user management
 gem 'devise'
+
+# image relevant
+gem 'carrierwave'
+gem 'mini_magick'
+
+gem 'pry'

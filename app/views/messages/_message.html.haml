@@ -1,0 +1,9 @@
+.message
+  %ul.message__lists
+    %li.message__lists__list#user-name
+      = message.user.name
+    %li.message__lists__list#date
+      = message.created_at
+  %p.message--content
+    = message.body if message.body.present?
+    = image_tag message.image.url if message.image.present?

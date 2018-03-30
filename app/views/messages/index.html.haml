@@ -1,0 +1,20 @@
+= render "shared/sidebar"
+.chat
+  .chat__header
+    .chat__header__left
+      .chat__header__left__group-name
+        = @group.name
+      .chat__header__left__members
+        Member:
+        - @group.members.each do |member|
+          = member.user.name
+    .chat__header__btn
+      = link_to "Edit", "groups/#{:id}/edit", class: "btn"
+  .chat__messages
+    = render @messages
+  .chat__form
+    = form_for [@group, @message] do |f|
+      = f.text_field :body, class: 'chat__form--message', placeholder: 'type a message'
+      = f.label :image, class: 'fa fa-picture-o icon' do
+        = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'chat__form--btn'
