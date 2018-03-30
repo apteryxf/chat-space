@@ -36,6 +36,7 @@
   }
   &__messages {
     height: calc(100% - 100px - 90px);
+    overflow: scroll;
     padding: $side_padding;
     background-color: #AAAAAA;
     .message {
@@ -52,7 +53,7 @@
           float: left;
         }
       }
-      &--body {
+      &--content {
         padding: 10px 0 40px 0;
         clear: both;
         @include font(14px, normal, #434A54)
@@ -61,34 +62,32 @@
   }
   &__form {
     height: 90px;
-    &__form {
-      position: relative;
-      &--message {
-        height: 50px;
-        width: calc(100% - 40px * 2 - 93px);
-        box-sizing: border-box;
-        padding-left: 10px;
-        margin: 18px 13px 18px 38px;
-        @include font(16px, normal, #434A54);
-        float: left;
+    position: relative;
+    &--message {
+      height: 50px;
+      width: calc(100% - 40px * 2 - 93px);
+      box-sizing: border-box;
+      padding-left: 10px;
+      margin: 18px 13px 18px 38px;
+      @include font(16px, normal, #434A54);
+      float: left;
+    }
+    .fa {
+      position: absolute;
+      top: 38px;
+      right: 145px;
+      .hidden {
+        display: none;
       }
-      .fa {
-        position: absolute;
-        top: 38px;
-        right: 145px;
-        .hidden {
-          display: none;
-        }
-      }
-      &--btn {
-        height: 50px;
-        width: 80px;
-        margin: 20px 40px 0 0;
-        background-color: #38AEF0;
-        color: white;
-        border: none;
-        float: right;
-      }
+    }
+    &--btn {
+      height: 50px;
+      width: 80px;
+      margin: 20px 40px 0 0;
+      background-color: #38AEF0;
+      color: white;
+      border: none;
+      float: right;
     }
   }
 }
