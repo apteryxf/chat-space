@@ -38,6 +38,7 @@ $(function() {
       // $('.chat__messages').animate({
       //   scrollTop: $(document).height()
       // });
+      $(".chat__messages").scrollTop($(".chat__messages")[0].scrollHeight);
     })
     .fail(function() {
       alert('error');
