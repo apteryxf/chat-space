@@ -34,9 +34,6 @@ $(function() {
       $('.chat__messages').append(html);
       $('.chat__form--message').val('');
       $('.hidden').val('');
-      // $('.chat__messages').animate({
-      //   scrollTop: $(document).height()
-      // });
       $(".chat__messages").scrollTop($(".chat__messages")[0].scrollHeight);
     })
     .fail(function() {
