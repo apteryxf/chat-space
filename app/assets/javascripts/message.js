@@ -39,6 +39,9 @@ $(function() {
       //   scrollTop: $(document).height()
       // });
     })
+    .fail(function() {
+      alert('error');
+    })
     return false;
   })
 });
