@@ -30,7 +30,6 @@ $(function() {
       contentType: false
     })
     .done(function(data) {
-      console.log(data);
       var html = buildHTML(data);
       $('.chat__messages').append(html);
       $('.chat__form--message').val('');
