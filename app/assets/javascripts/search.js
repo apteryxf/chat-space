@@ -27,7 +27,7 @@ $(function() {
         });
       }
       else {
-        appendNoUser("一致するユーザーはいません");
+        $("#chat-group-user").append("一致するユーザーはいません");
       }
     })
   });
