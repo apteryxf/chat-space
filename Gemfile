@@ -79,3 +79,6 @@ gem 'carrierwave'
 gem 'mini_magick'
 
 gem 'pry'
+
+# require image uploading to AWS S3
+gem 'fog'
