@@ -36,6 +36,7 @@ $(function() {
   });
 
   $(document).on("click", ".user-search-add", function() {
-    alert("yes");
+    $(".chat-group-user").remove();
+
   });
 });
