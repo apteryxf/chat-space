@@ -19,11 +19,11 @@ $(function() {
     })
 
     .done(function(users) {
-      $("#chat-group-user").empty();
+      $("#user-search-result").empty();
       if (users.length !== 0) {
         users.forEach(function(user) {
           var html = appendUser(user);
-          $("#chat-group-user").append(html);
+          $("#user-search-result").append(html);
         });
       }
       else {
@@ -33,5 +33,9 @@ $(function() {
     .fail(function() {
       alert("ユーザー検索に失敗しました");
     })
+  });
+
+  $(document).on("click", ".user-search-add", function() {
+    alert("yes");
   });
 });
