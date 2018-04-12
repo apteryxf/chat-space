@@ -7,4 +7,6 @@ class User < ApplicationRecord
   has_many :members
   has_many :groups, through: :members
   has_many :messages
+
+  scope :search_with_name, ->(keyword) { where('name LIKE(?)', keyword) }
 end
