@@ -34,9 +34,4 @@ $(function() {
       alert("ユーザー検索に失敗しました");
     })
   });
-
-  $(document).on("click", ".user-search-add", function() {
-    $(".chat-group-user").remove();
-
-  });
 });
