@@ -11,15 +11,15 @@ $(function() {
 
   var user_list = $("#chat-group-user")
 
-  $(document).on("click", ".user-search-add", function() {
+  $("#user-search-result").on("click", ".user-search-add", function() {
     $(this).parent().remove();
     var user_id = $(this).attr('data-user-id');
     var user_name = $(this).attr('data-user-name');
     addUser(user_id, user_name);
   });
 
-  $(document).off("click", ".user-search-remove");
-  $(document).on("click", ".user-search-remove", function() {
+  $("#chat-group-user").off("click", ".user-search-remove");
+  $("#chat-group-user").on("click", ".user-search-remove", function() {
     $(this).parent().remove();
   });
 });
