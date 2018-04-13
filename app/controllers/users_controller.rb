@@ -1,5 +1,14 @@
 class UsersController < ApplicationController
 
+  def index
+    @user = User.new
+    @users = User.search_with_name("%#{params[:keyword]}%")
+    respond_to do |format|
+      format.html { redirect_to new_group_path }
+      format.json
+    end
+  end
+
   def edit
 
   end
