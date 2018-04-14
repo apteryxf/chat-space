@@ -1,4 +1,4 @@
-$(function() {
+$(document).on('turbolinks:load', function() {
   function buildHTML(message) {
     var html = `<div class="message" data-user-id="${message.id}">
                   <ul class="message__lists">
@@ -11,7 +11,7 @@ $(function() {
                   </ul>
                   <p class="message--content">
                     ${message.body}
-                  <img src="${message.image}">
+                    <img src="${message.image}">
                   </p>
                 </div>`
     return html;
