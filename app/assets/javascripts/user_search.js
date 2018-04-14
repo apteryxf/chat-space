@@ -26,11 +26,12 @@ $(function() {
         });
       }
       else {
-        $("#chat-group-result").append("一致するユーザーはいません");
+        $("#user-search-result").append("一致するユーザーはいません");
       }
     })
     .fail(function() {
       alert("ユーザー検索に失敗しました");
     })
+    return false
   });
 });
