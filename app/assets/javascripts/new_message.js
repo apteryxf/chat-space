@@ -1,19 +1,19 @@
-$(function() {
+$(document).on('turbolinks', function() {
   function buildHTML(message) {
     var html = `<div class="message" data-user-id="${message.id}">
-                  <ul class="message__lists">
-                    <li class="message__lists__list" id="user-name">
-                      ${message.name}
-                    </li>
-                    <li class="message__lists__list" id="date">
-                      ${message.created_at}
-                    </li>
-                  </ul>
-                  <p class="message--content">
-                    ${message.body}
-                  <img src="${message.image}">
-                  </p>
-                </div>`
+    <ul class="message__lists">
+    <li class="message__lists__list" id="user-name">
+    ${message.name}
+    </li>
+    <li class="message__lists__list" id="date">
+    ${message.created_at}
+    </li>
+    </ul>
+    <p class="message--content">
+    ${message.body}
+    <img src="${message.image}">
+    </p>
+    </div>`
     return html;
   }
 
