@@ -1,4 +1,4 @@
-$(function() {
+$(document).on('turbolinks:load', function() {
 
   function addUser(id, name) {
     var html = `<div class='chat-group-user clearfix js-chat-member' id='chat-group-user-${id}'>
